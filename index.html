@@ -9,10 +9,9 @@
 </head>
 <body>
    
-    <header>
+    <header class="header-background">
         <div class="logo">
             <img src="logo 1.png" alt="Deep Thought Logo">
-            <h1>DEEP <span class="highlight">THOUGHT</span></h1>
         </div>
         <div class="top-nav">
             <button><i class="fas fa-home"></i></button>
@@ -20,26 +19,30 @@
             <button><i class="fas fa-bell"></i></button>
             <button><i class="fas fa-user"></i></button>
         </div>
-        <button class="submit-button">Submit Task</button>
     </header>
 
-   
+    <button class="submit-button">Submit Task</button>
+
+ 
     <section class="notice-board">
         <h2>Technical Project Management</h2>
-        <p>Explore the world of management. As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion. How do you want to manage each step of your life?</p>
+        <div class="explore-box">
+            <p>Explore the world of management.</p>
+        </div>
+        <p>As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion. How do you want to manage each step of your life?</p>
     </section>
-    <!-- Main Content Area -->
+
     <section class="main-content">
-        <!-- Box 1: Technical Project Management with YouTube Video -->
+        <!-- Box 1: -->
         <div class="box">
             <div class="box-heading">Technical Project Management</div>
             <div class="video">
-                <iframe width="100%" height="240" src="https://www.youtube.com/embed/TiMRwri1xJ8" frameborder="0" allowfullscreen></iframe> <!-- Corrected video URL -->
+                <iframe width="100%" height="240" src="https://www.youtube.com/embed/TiMRwri1xJ8" frameborder="7" allowfullscreen></iframe>
                 <p>Description: Story of Alignment, Scope of Agility, Specific Accountable Staggering Approach</p>
             </div>
         </div>
 
-        <!-- Box 2: Threadbuild with Input Sections -->
+        <!-- Box 2:-->
         <div class="box">
             <div class="box-heading">Threadbuild</div>
             <div class="threads">
@@ -54,7 +57,7 @@
             </div>
         </div>
 
-        <!-- Box 3: Structure Your Pointers with Title and Content -->
+        <!-- Box 3: -->
         <div class="box">
             <div class="box-heading">Structure Your Pointers</div>
             <div class="structure">
@@ -66,7 +69,7 @@
             </div>
         </div>
 
-        <!-- Box 4: 4SA Method with Description and Thread A -->
+        <!-- Box 4:  -->
         <div class="box">
             <div class="box-heading">4SA Method</div>
             <div class="description">
@@ -77,7 +80,13 @@
         </div>
     </section>
 
-    <script src="script.js"></script> <!-- Add your JavaScript file -->
+    
+    <div class="icons-container">
+        <button class="icon-button"><i class="fas fa-question"></i></button>
+        <button class="icon-button"><i class="fas fa-users"></i></button>
+        <button class="icon-button"><i class="fas fa-calendar-alt"></i></button>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
-
