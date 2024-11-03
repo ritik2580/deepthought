@@ -47,16 +47,29 @@ projectData.tasks.forEach(task => {
         </div>
     `;
     tasksContainer.appendChild(taskDiv);
+
+    const detailsDiv = document.createElement('div');
+    detailsDiv.className = 'details';
+    detailsDiv.innerHTML = `
+        <textarea placeholder="Add your notes here..."></textarea>
+        <button class="toggle-details" aria-expanded="false">Show/Hide Details</button>
+    `;
+
+    taskDiv.appendChild(detailsDiv);
+
+    
+    const toggleButton = taskDiv.querySelector('.toggle-details');
+    toggleButton.addEventListener('click', () => {
+        const isVisible = detailsDiv.style.display === 'block';
+        detailsDiv.style.display = isVisible ? 'none' : 'block';
+        detailsDiv.style.opacity = isVisible ? '0' : '1'; // Opacity for fade effect
+        detailsDiv.style.transition = 'opacity 0.3s ease'; // Smooth transition
+        toggleButton.setAttribute('aria-expanded', !isVisible);
+    });
 });
 
-const detailsDiv = document.createElement('div');
-detailsDiv.className = 'details';
-detailsDiv.innerHTML = `
-    <textarea placeholder="Add your notes here..."></textarea>
-    <button class="toggle-details">Show/Hide Details</button>
-`;
 
-taskDiv.appendChild(detailsDiv);
-taskDiv.querySelector('.toggle-details').addEventListener('click', () => {
-    detailsDiv.style.display = detailsDiv.style.display === 'block' ? 'none' : 'block';
+document.querySelectorAll('.details').forEach(detailsDiv => {
+    detailsDiv.style.display = 'none';
+    detailsDiv.style.opacity = '0'; // Start hidden with zero opacity
 });
