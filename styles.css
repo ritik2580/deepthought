@@ -1,4 +1,4 @@
-
+/* General Styling */
 body {
    font-family: 'Arial', sans-serif;
    background-color: #f4f4f4;
@@ -6,20 +6,20 @@ body {
    padding: 0;
 }
 
-
+/* Container */
 .container {
    width: 90%;
    margin: auto;
    padding: 20px;
 }
 
-
-header {
+/* Header */
+.header-background {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 10px 0;
-   border-bottom: 1px solid #ddd;
+   background-color: #E9ECEF; 
+   padding: 10px;
 }
 
 header h1 {
@@ -32,32 +32,32 @@ header h1 {
 }
 
 .logo img {
-   width: 40px;
+   width: 311px;
+   height: 49px;
    margin-right: 10px;
 }
 
-
+/* Top Navigation Buttons */
 .top-nav {
    display: flex;
    gap: 15px;
 }
 
 .top-nav button {
-   background-color: #0029FF;
+   background-color: #04c3f8;
    color: white;
-
    padding: 10px 15px;
    border: none;
-   border-radius: 5px;
+   border-radius: 40px;
    cursor: pointer;
-   transition: background 0.3s;
+   transition: background 0.6s;
 }
 
 .top-nav button:hover {
    background-color: #0056b3;
 }
 
-
+/* Submit Button */
 .submit-button {
    background-color: #007BFF;
    color: white;
@@ -66,23 +66,41 @@ header h1 {
    border-radius: 5px;
    cursor: pointer;
    transition: background 0.3s;
+   margin: 20px 0;
+   position: absolute; 
+   right: 20px; 
 }
 
 .submit-button:hover {
    background-color: #0056b3;
 }
 
-
+/* Notice Board */
 .notice-board {
    background-color: #E9ECEF;
    border-left: 4px solid #007BFF;
    padding: 20px;
    margin: 20px 0;
    border-radius: 8px;
+   font-family: poppins;
 }
 
 .notice-board h2 {
    color: #0029FF;
+}
+
+/* Explore Box */
+.explore-box {
+   background-color: #E0E0E0; /* Grey background */
+   padding: 10px;
+   border-radius: 5px;
+   margin: 10px 0;
+}
+
+.explore-box p {
+   margin: 0;
+   color: #000; 
+   font-weight: bold; 
 }
 
 /* Main Content Layout */
@@ -91,15 +109,16 @@ header h1 {
    flex-wrap: wrap;
    gap: 20px;
    justify-content: center;
+   position: relative; 
 }
 
 /* Boxes */
 .box {
    width: 480px;
-   height: 580px;
+   height: auto; 
    background: #fff;
    padding: 20px;
-   border-radius: 15px 0px 0px 0px;
+   border-radius: 15px 8px 8px 8px;
    box-shadow: 0px -4px 4px 0px #00000040, 0px 4px 4px 0px #00000040;
    opacity: 1;
    transition: transform 0.3s, box-shadow 0.3s;
@@ -111,13 +130,18 @@ header h1 {
    box-shadow: 0px -4px 8px 0px #00000040, 0px 4px 8px 0px #00000040;
 }
 
+/* Video Container */
+.video {
+   margin-bottom: 20px; /
+}
+
 /* Box Headings */
 .box-heading {
    background-color: #000;
    color: #fff;
-   padding: 5px 10px;
-   margin-bottom: 15px;
-   border-radius: 5px;
+   padding: 20px 25px;
+   margin: 6px;
+   border-radius: 6px; 
 }
 
 /* Thread Sections */
@@ -158,10 +182,27 @@ header h1 {
    resize: vertical;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-   .box {
-       width: 100%;
-       height: auto;
-   }
+
+.icons-container {
+   display: flex;
+   justify-content: flex-end; 
+   gap: 10px;
+   margin: 20px; 
+
+.icon-button {
+   background-color: #007BFF; /* Blue background */
+   color: white; 
+   border: none;
+   padding: 10px;
+   border-radius: 50%; 
+   cursor: pointer;
+   font-size: 30px; 
+   transition: background 0.4s;
 }
+
+.icon-button:hover {
+   background-color: #0056b3; 
+}
+
+@media (max-width: 1024px) {
+  
